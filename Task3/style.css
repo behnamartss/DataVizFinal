@@ -1,0 +1,10 @@
+
+        circle {
+            stroke-width: 1px;
+            stroke: black;
+            opacity: .8
+        }
+
+        circle:hover {
+            stroke: black;
+        }
