@@ -126,7 +126,7 @@ var showNumber=5
     // set the color scale
     const color = d3.scaleOrdinal()
       .domain(selected_genras)
-      .range(d3.schemeDark2);
+      .range(['#EF1B0A','#F69D96','#D39550','#834806','cyan','#E7E710','#747459','#AEEB83','#0C64D6','#634DBB','#8C4DBB','#180923','#DB06F9','#F906A1','orange','gray']);
     
     // A function that create / update the plot for a given variable:
     function update(data) {
@@ -251,7 +251,7 @@ document.getElementById("singers").onchange =  async function() {onchange_action
     // set the color scale
     const color = d3.scaleOrdinal()
       .domain(selected_genras)
-      .range(d3.schemeDark2);
+      .range(['#EF1B0A','#F69D96','#D39550','#834806','cyan','#E7E710','#747459','#AEEB83','#0C64D6','#634DBB','#8C4DBB','#180923','#DB06F9','#F906A1','orange','gray']);
     
     // A function that create / update the plot for a given variable:
     function update(data) {
