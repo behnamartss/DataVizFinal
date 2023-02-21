@@ -1,4 +1,4 @@
-const data = await d3.csv("../data/best_selling_artists_final.csv");
+const data = await d3.csv("data/best_selling_artists_final.csv");
 var genras={}
 data.forEach(element => {
     var str= element.Genre;

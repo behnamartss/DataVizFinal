@@ -31,7 +31,7 @@ var svg=d3.select("#waffleChart").append('svg')
 
  //(async function() {
     
- const data = await d3.csv("../data/best_selling_artists_final.csv");
+ const data = await d3.csv("data/best_selling_artists_final.csv");
   data.forEach(element=>{
     element['Genre']=element['Genre'].replace('R&B','r_b')
   })

@@ -1,7 +1,7 @@
 //import * as Chart from "../lib/charts.js";
 
 // load the data here
-const data = await d3.csv("../data/best_selling_artists_final.csv");
+const data = await d3.csv("data/best_selling_artists_final.csv");
 const width = 500; 
 const topTrees =["Sales", "TCU"];
  
