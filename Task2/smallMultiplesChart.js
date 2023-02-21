@@ -18,8 +18,8 @@ const topTrees =["Sales", "TCU"];
  result.forEach((value, key) => {
      finalData.push({
          artist: value['Artist'],
-         sales: value['Sales'],
-         tcu:value['TCU']
+         sales: parseFloat(value['Sales']),
+         tcu:parseInt(value['TCU'])
          //meanCanopy: d3.mean(value, d => d.properties["Canopy Cover (m2)"])
      });
  });
@@ -58,7 +58,7 @@ function BarChart(data, {
   height, // outer height, in pixels
   xType = d3.scaleLinear, // type of x-scale
   xDomain, // [xmin, xmax]
-  xRange = [marginLeft, width - marginRight-180], // [left, right]
+  xRange = [marginLeft, width - marginRight-100], // [left, right]
   xFormat, // a format specifier string for the x-axis
   xLabel, // a label for the x-axis
   yPadding = 0.1, // amount of y-range to reserve to separate bars
@@ -101,7 +101,7 @@ function BarChart(data, {
   }
 
   const svg = d3.create("svg")
-      .attr("width", width+100)
+      .attr("width", width)
       .attr("height", height)
       .attr("viewBox", [0, 0, width, height])
       .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
@@ -154,6 +154,7 @@ function BarChart(data, {
 
   return svg.node();
 }
+
 function BarChart1(data, {
   x = d => d, // given d in data, returns the (quantitative) x-value
   y = (d, i) => i, // given d in data, returns the (ordinal) y-value
@@ -294,10 +295,10 @@ var plottedChart2=document.getElementById("plotDiv2").appendChild(chart2);
 
 
 
-document.getElementById("singers").onchange =  async function() {onchange_action(this.value)};
+document.getElementById("singers2").onchange =  async function() {onchange_action(this.value)};
  async function onchange_action(e)
 {
-  
+  console.log('hwllo')
     showNumber=e
     document.getElementById("plotDiv1").removeChild(plottedChart1);
     document.getElementById("plotDiv2").removeChild(plottedChart2);

@@ -510,8 +510,8 @@ const tooltip = d3.select("#waffleChart")
       // .style("top", (event.y)/2-50 + "px")
       // .style("left", document.getElementById('#bubbleChart').getBoundingClientRect().x  + "200px")
       // .style("top", document.getElementById('#bubbleChart').getBoundingClientRect().y+ "200px")
-      .style("left", event.clientX+60+'px')
-      .style("top", event.clientY+1300+'px')
+      .style("left",event.pageX+60+'px')
+      .style("top", event.pageY+60+'px')
   }
   const hideTooltip = function(event, d) {
     var elements = document.getElementsByClassName((d.genre+d.Country).replace(' ',''));
@@ -522,8 +522,8 @@ const tooltip = d3.select("#waffleChart")
       .transition()
       .duration(20)
       .style("opacity", 0)
-      .style("left", event.clientX+'px')
-      .style("top", event.clientY+'px')
+      .style("left", event.pageX+60+'px')
+      .style("top", event.pageY+60+'px')
   }
 
 

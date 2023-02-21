@@ -123,10 +123,10 @@ sorted_selected.forEach((element,index)=>{
       .style("color", "white")
       .style('z-index',2)
       .style('position','absolute')
-      
+     
   // -2- Create 3 functions to show / update (when mouse move but stay on same circle) / hide the tooltip
   const showTooltip = function(event,d) {
-    
+    console.log('im here')
     tooltip
       .transition()
       .duration(200)
@@ -135,11 +135,11 @@ sorted_selected.forEach((element,index)=>{
       .html("Artist: " + d.Artist + "<br> TCU:"+ d['TCU'] + "<br> Sales:"+ d['Sales'])
       // .style("left", document.getElementById('#bubbleChart').getBoundingClientRect().x  + "200px")
       // .style("top", document.getElementById('#bubbleChart').getBoundingClientRect().y + "200px")
-      .style("left", event.clientX)
-      .style("top", event.clientY)
+      .style("left", event.pageX+60)
+      .style("top", event.pageY-60)
      
       console.log(event.clientX)
-     
+      
   }
   const moveTooltip = function(event, d) {
     tooltip
@@ -147,16 +147,16 @@ sorted_selected.forEach((element,index)=>{
       // .style("top", (event.y)/2-50 + "px")
       // .style("left", document.getElementById('#bubbleChart').getBoundingClientRect().x  + "200px")
       // .style("top", document.getElementById('#bubbleChart').getBoundingClientRect().y+ "200px")
-      .style("left", event.clientX+60+'px')
-      .style("top", event.clientY+1150+'px')
+      .style("left", event.pageX+60+'px')
+      .style("top", event.pageY-60+'px')
   }
   const hideTooltip = function(event, d) {
     tooltip
       .transition()
-      .duration(20)
+      .duration(50)
       .style("opacity", 0)
-      .style("left", event.clientX+'px')
-      .style("top", event.clientY+'px')
+      .style("left", event.pageX+60)
+      .style("top", event.pageY-60)
   }
 
 
@@ -286,7 +286,7 @@ sorted_selected.forEach((element,index)=>{
  // })
 
 
- document.getElementById("singers").onchange =  async function() {onchange_action(this.value)};
+ document.getElementById("singers3").onchange =  async function() {onchange_action(this.value)};
 
  async function onchange_action(e)
 {
@@ -427,8 +427,8 @@ console.log(sorted_selected_names)
       .html("Artist: " + d.Artist + "<br> TCU:"+ d['TCU'] + "<br> Sales:"+ d['Sales'])
       // .style("left", document.getElementById('#bubbleChart').getBoundingClientRect().x  + "200px")
       // .style("top", document.getElementById('#bubbleChart').getBoundingClientRect().y + "200px")
-      .style("left", event.clientX)
-      .style("top", event.clientY)
+      .style("left", event.pageX+60)
+      .style("top", event.pageY-60)
      
       console.log(event.clientX)
      
@@ -439,16 +439,16 @@ console.log(sorted_selected_names)
       // .style("top", (event.y)/2-50 + "px")
       // .style("left", document.getElementById('#bubbleChart').getBoundingClientRect().x  + "200px")
       // .style("top", document.getElementById('#bubbleChart').getBoundingClientRect().y+ "200px")
-      .style("left", event.clientX+60+'px')
-      .style("top", event.clientY+1150+'px')
+      .style("left", event.pageX+60+'px')
+      .style("top", event.pageY-60+'px')
   }
   const hideTooltip = function(event, d) {
     tooltip
       .transition()
-      .duration(20)
+      .duration(50)
       .style("opacity", 0)
-      .style("left", event.clientX+'px')
-      .style("top", event.clientY+'px')
+      .style("left", event.pageX+60+'px')
+      .style("top", event.pageY-60+'px')
   }
 
 

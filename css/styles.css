@@ -79,7 +79,15 @@
     scroll-behavior: smooth;
   }
 }
-
+h2{
+  font-family: 'Roboto Slab', serif;
+}
+.text-white{
+  font-family: 'Roboto Slab', serif;
+}
+p{
+  font-family: 'Fira Sans', serif;
+}
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -11562,7 +11570,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/download.jfif");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/micheal.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11714,4 +11722,8 @@ body {
 }
 .wafflechart{
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/waffle_chart_black.jpg");
+}
+
+p{
+  font-family: 'Fira Sans', serif;
 }

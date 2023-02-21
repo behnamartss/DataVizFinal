@@ -78,7 +78,7 @@ data.forEach(element => {
     
 });
 
-
+console.log(genras)
 var showNumber=5
     const topN = Object
       .entries(genras) // create Array of Arrays with [key, value]
@@ -102,13 +102,13 @@ var showNumber=5
     
     
     const width = 1000,
-    height = 800*(topN.length/10),
-    margin = 40+showNumber*6;
+    height = 600,
+    margin = 40;
 
     
     // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
-    const radius = Math.min(width, height) / 2 - margin;
-    
+    //const radius = Math.min(width, height) / 2 - margin;
+    const radius = 200
     // append the svg object to the div called 'my_dataviz'
     const svg = d3.select("#pieChart")
       .append("svg")
@@ -137,7 +137,7 @@ var showNumber=5
         .sort(function(a, b) { return d3.ascending(a.value, b.value);} ) // This make sure that group order remains the same in the pie chart
         
       const data_ready = pie(Object.entries(data))
-    
+      console.log(data_ready)
       // map to data
       const u = svg.selectAll("path")
         .data(data_ready)
@@ -146,6 +146,55 @@ var showNumber=5
         .innerRadius(0)
         .outerRadius(radius)
       // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+      /////
+      // Create tip 
+
+    const tooltip = d3.select("#pieChart")
+    .append("div")
+      .style("opacity", 0)
+      .attr("class", "tooltip")
+      .style("background-color", "black")
+      .style("border-radius", "5px")
+      .style("padding", "10px")
+      .style("color", "white")
+      .style('z-index',2)
+      .style('position','absolute');
+    const showTooltip = function(event,d) {
+      
+      tooltip
+        .transition()
+        .duration(200)
+      tooltip
+        .style("opacity", 1)
+        .html("Genre: " + (d.data[1][0]) + "<br> Percentage:"+ ((d.data[1][1]/total)*100).toFixed(2) + '%' )
+        // .style("left", document.getElementById('#bubbleChart').getBoundingClientRect().x  + "200px")
+        // .style("top", document.getElementById('#bubbleChart').getBoundingClientRect().y + "200px")
+        .style("left", event.pageX+60)
+        .style("top", event.pageY-60)
+       
+        console.log(event.clientX)
+        
+    }
+    const moveTooltip = function(event, d) {
+      tooltip
+        // .style("left", (event.x)/2 + "px")
+        // .style("top", (event.y)/2-50 + "px")
+        // .style("left", document.getElementById('#bubbleChart').getBoundingClientRect().x  + "200px")
+        // .style("top", document.getElementById('#bubbleChart').getBoundingClientRect().y+ "200px")
+        .style("left", event.pageX+60+'px')
+        .style("top", event.pageY-60+'px')
+    }
+    const hideTooltip = function(event, d) {
+      tooltip
+        .transition()
+        .duration(50)
+        .style("opacity", 0)
+        .style("left", event.pageX+60)
+        .style("top", event.pageY-60)
+    }
+    
+      /////
+
       svg
       .selectAll('mySlices')
       .data(data_ready)
@@ -155,7 +204,9 @@ var showNumber=5
         .attr("stroke", "black")
         .style("stroke-width", "2px")
         .style("opacity", 0.7)
-    
+        .on("mouseover", showTooltip )
+        .on("mousemove", moveTooltip )
+        .on("mouseleave", hideTooltip )
     // Now add the annotation. Use the centroid method to get the best coordinates
     svg
       .selectAll('mySlices')
@@ -175,8 +226,10 @@ var showNumber=5
     .style('width',30)
     .style('height',30)
     .attr('fill', function(d){ return(color(d.data[1][0])) })
-    .attr('x',topN.length+350)
+    .attr('x',topN.length-350)
     .attr('y',d=>d.data[0]*50-100-topN.length*15)
+
+
     
     //adding text next to the legends
     
@@ -188,8 +241,9 @@ var showNumber=5
     .style('width',30)
     .style('height',30)
     .attr('fill', function(d){ return(color(d.data[1][0])) })
-    .attr('x',topN.length+400)
+    .attr('x',topN.length-300)
     .attr('y',d=>d.data[0]*50-100-topN.length*15)
+    
     
     }
     
@@ -200,7 +254,7 @@ var showNumber=5
 
 ///// ******** On Change ///////////////////
 
-document.getElementById("singers").onchange =  async function() {onchange_action(this.value)};
+document.getElementById("singers4").onchange =  async function() {onchange_action(this.value)};
 
  async function onchange_action(e)
 {
@@ -228,20 +282,19 @@ document.getElementById("singers").onchange =  async function() {onchange_action
     
     
     const width = 1000,
-        height = 800*(topN.length/10),
-        margin = 40+showNumber*6;
+        height = 1000,
+        margin = 40;
     
     // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
-    const radius = Math.min(width, height) / 2 - margin;
-    
+    //const radius = Math.min(width, height) / 2 - margin;
+    const radius = 200
     // append the svg object to the div called 'my_dataviz'
     const svg = d3.select("#pieChart")
       .append("svg")
         .attr("width", width)
         .attr("height", height)
       .append("g")
-        .attr("transform", `translate(${width/3}, ${height/2})`);
-    
+        .attr("transform", `translate(${width/3}, ${height/2-200})`);
     // create 2 data_set
     //const data1 = {a: 9, b: 20, c:30, d:8, e:12}
     const data1=topN
@@ -271,6 +324,54 @@ document.getElementById("singers").onchange =  async function() {onchange_action
         .innerRadius(0)
         .outerRadius(radius)
       // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+          // Create tip 
+
+    const tooltip = d3.select("#pieChart")
+    .append("div")
+      .style("opacity", 0)
+      .attr("class", "tooltip")
+      .style("background-color", "black")
+      .style("border-radius", "5px")
+      .style("padding", "10px")
+      .style("color", "white")
+      .style('z-index',2)
+      .style('position','absolute')
+
+    const showTooltip = function(event,d) {
+      
+      tooltip
+        .transition()
+        .duration(200)
+      tooltip
+        .style("opacity", 1)
+        .html("Genre: " + (d.data[1][0]) + "<br> Percentage:"+ ((d.data[1][1]/total)*100).toFixed(2) + '%' )
+        // .style("left", document.getElementById('#bubbleChart').getBoundingClientRect().x  + "200px")
+        // .style("top", document.getElementById('#bubbleChart').getBoundingClientRect().y + "200px")
+        .style("left", event.pageX+60)
+        .style("top", event.pageY-60)
+       
+        console.log(event.clientX)
+        
+    }
+    const moveTooltip = function(event, d) {
+      tooltip
+        // .style("left", (event.x)/2 + "px")
+        // .style("top", (event.y)/2-50 + "px")
+        // .style("left", document.getElementById('#bubbleChart').getBoundingClientRect().x  + "200px")
+        // .style("top", document.getElementById('#bubbleChart').getBoundingClientRect().y+ "200px")
+        .style("left", event.pageX+60+'px')
+        .style("top", event.pageY-60+'px')
+    }
+    const hideTooltip = function(event, d) {
+      tooltip
+        .transition()
+        .duration(50)
+        .style("opacity", 0)
+        .style("left", event.pageX+60)
+        .style("top", event.pageY-60)
+    }
+    
+      /////
       svg
       .selectAll('mySlices')
       .data(data_ready)
@@ -280,7 +381,9 @@ document.getElementById("singers").onchange =  async function() {onchange_action
         .attr("stroke", "black")
         .style("stroke-width", "2px")
         .style("opacity", 0.7)
-    
+        .on("mouseover", showTooltip )
+        .on("mousemove", moveTooltip )
+        .on("mouseleave", hideTooltip )
     // Now add the annotation. Use the centroid method to get the best coordinates
     svg
       .selectAll('mySlices')
@@ -300,8 +403,8 @@ document.getElementById("singers").onchange =  async function() {onchange_action
     .style('width',30)
     .style('height',30)
     .attr('fill', function(d){ return(color(d.data[1][0])) })
-    .attr('x',topN.length+300)
-    .attr('y',d=>d.data[0]*50-100-topN.length*15)
+    .attr('x',topN.length-350)
+    .attr('y',d=>d.data[0]*50-topN.length*15)
     
     //adding text next to the legends
     
@@ -313,8 +416,8 @@ document.getElementById("singers").onchange =  async function() {onchange_action
     .style('width',30)
     .style('height',30)
     .attr('fill', function(d){ return(color(d.data[1][0])) })
-    .attr('x',topN.length+350)
-    .attr('y',d=>d.data[0]*50-100-topN.length*15)
+    .attr('x',topN.length-300)
+    .attr('y',d=>d.data[0]*50+20-topN.length*15)
     
     }
     

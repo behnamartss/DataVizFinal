@@ -12,8 +12,15 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/styles_bubble.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -55,12 +62,17 @@
                     <div class="col-lg-8">
                         <!--<h2 class="text-white mb-4">Built with Bootstrap 5</h2> -->
                         <p class="text-white-50">
-                            Behnam Rad is a second year UNIGE student studying his Master's in Computer Science: Artificial Intelligence who has finished his Bachelor's in computer engineering, in the track of software engineering.
-                            S5222186                 
+                        In this project we are going to manipulate a dataset called best selling artists ever which is provided as a csv file. The last of column named 
+                        years_active is one of the columns I added using python to have a more completed dataset. This dataset is an unstructured dataset which means
+                        we can visualize two meaningless charts at most using just those columns. That is to say, we need many manipulations and text analysis to 
+                        make that data usable in a way we want. This dataset includes ranges of numbers in a string format or also different important data all in string format 
+                        next to each other without any specific pattern which makes the dataset challenging to work with.  
+                         The following list of best-selling music artists includes those music acts from the 20th century to the present with claims of 
+                         75 million or more record sales worldwide.    
                         </p>
                     </div>
                 </div>
-                <img class="img-fluid" src="assets/img/taylor.png" alt="..." />
+                <img class="img-fluid" src="assets/img/best_selling.jpg" alt="..." />
             </div>
         </section>
         <!-- Projects-->
@@ -68,10 +80,10 @@
             <div class="container px-4 px-lg-5">
                 <!-- Featured Project Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/guitar.jpg" alt="..." /></div>
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/elvis.png" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <h4>Shoreline</h4>
+                            <h4>What are we going to see?</h4>
                             <p class="text-black-50 mb-0">The goal is to show some visualization on the dataset of best selling singers all around the world.
                                 We will show some comparisons on different aspects of the dataset.</p>
                         </div>
@@ -84,7 +96,7 @@
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <a class="text-white" style="font-size: x-large;" href="Task1/index.html" >Task1</a>
+                                    <a class="text-white" style="font-size: x-large;" href="#Task1" >Task1</a>
                                     <p class="mb-0 text-white-50">We want to show the 10, 20 and 50 top singers with the most number of sales.</p>
                                     <hr class="d-none d-lg-block mb-0 ms-0" />
                                 </div>
@@ -99,7 +111,7 @@
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <a class="text-white" style="font-size: x-large;" href="Task2/index.html" >Task2</a>
+                                    <a class="text-white" style="font-size: x-large;" href="#Task2" >Task2</a>
                                     <p class="mb-0 text-white-50">We will have a comparison between the number of sales and TCU for 10,20,50 top singers with the most number 
                                         of sales via multiple small charts. We want to see that do the singers with the highest numbers of sales have higher number of TCU too or not. TCU is
                                          total certified units which can be also comprised of units certified for other singers featured with the corresponding singer. 
@@ -113,12 +125,12 @@
                 </div>
                 
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/bubble_chart.png" alt="..." /></div>
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/bubble_chart.jpg" alt="..." /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <a class="text-white" style="font-size: x-large;" href="Task3/index.html" >Task3</a>
+                                    <a class="text-white" style="font-size: x-large;" href="#Task3" >Task3</a>
                                     <p class="mb-0 text-white-50"> Showing the top 10,20,50 seller singers on a bubble chart with a color determined for each
                                         country. The x-axis would be the number of years active and the y-axis would be the
                                         number of sales. Hover shows the details of active years and sales with the name of the
@@ -131,12 +143,12 @@
                 </div>
                 <!-- Project Two Row-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/piechart.png" alt="..." /></div>
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/pie_chart.jpg" alt="..." /></div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <a  style="display: block; font-size: 20px" href="Task4/index.html" >Task4</a>
+                                    <a class="text-white" style="font-size: x-large;" href="#Task4" >Task4</a>
                                     <p class="mb-0 text-white-50">To what extent the 5-top most used genres have been used by singers? It is plotted on a pie chart.</p>
                                     <hr class="d-none d-lg-block mb-0 me-0" />
                                 </div>
@@ -151,9 +163,9 @@
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <a class="text-white" style="font-size: x-large;" href="Task5/index.html" >Task5</a>
-                                    <p class="mb-0 text-white-50"> We will plot a Waffle Chart for five top genres in terms of sales among all the signers' background 
-                                        comprised in the dataset to show signers born in which countries mostly tend to use that music genre in their work. 
+                                    <a class="text-white" style="font-size: x-large;" href="#Task5" >Task5</a>
+                                    <p class="mb-0 text-white-50"> We will plot a Waffle Chart for five top genres in terms of sales among all the singers' background 
+                                        comprised in the dataset to show singers born in which countries mostly tend to use that music genre in their work. 
                                         This can show us the music taste of both artists and audiences which constitues the highest number of sales for a genre</p>
                                     <hr class="d-none d-lg-block mb-0 ms-0" />
                                 </div>
@@ -166,50 +178,242 @@
 
             
         </section>
-        <!-- Signup-->
-        <section class="signup-section" id="signup">
+
+    
+        <!--     Chart1 Part-->
+        
+        <section class="holder" id="Task1">
+            
+            
             <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-10 col-lg-8 mx-auto text-center">
-                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Email address input-->
-                            <div class="row input-group-newsletter">
-                                <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
-                            </div>
-                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
-                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3 mt-2 text-white">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
-                        </form>
-                    </div>
+                <div class="row">
+                
+                <div class="col-7 justify-content-md-start">        
+                    
+                        <!--<h2 class="text-white mb-4">Built with Bootstrap 5</h2> -->
+                        <h2 class="text-gray-300" style="padding:20px" style="font-family: 'Roboto Slab', serif;">
+                            Who are the top 10, 20 and 50 top singers with the most number of sales?    
+                        </h2>
+                        <label for="singers">Number of Singers to show</label>
+                        <select name="singers" id="singers" >
+                            <option value="10">10</option>
+
+
+                            <option value="20">20</option>
+
+
+                            <option value="50">50</option>
+
+
+                        </select>
+
+                        <label for="years">Number of years being active</label>
+                        <select name="years" id="years" >
+                            <option value="10">Upto 10 years</option>
+
+
+                            <option value="20">Upto 20 years</option>
+
+
+                            <option value="80">Upto 80 years</option>
+
+
+                        </select>
+                       
+                        <div id="barchart" style="margin-bottom: 60px;"></div>
+                    
+                </div>
+                <div class="col-5"> 
+                    This chart concerns the number of sales for singers and we can show 10,
+                     20 or 50 of them at the same time while choosing among the ones have worked upto 
+                    10 years,20 years or 50 years. The beatles has the highest sales among the other
+                     four singers with 601M sales in 10 years. The sale for this singer is at peak
+                    with a high difference compared to the other four singers. Also, The doors has sold out for 75M in 8 years which has a
+                     high difference compared to the other remaining singers and the rest have sold close to one another.
+
+                    In this dataset, there are only five singers who have sold out more than 75M with 
+                    active years of less than or equal to 10 years. 
+                    When it comes to working for upto 20 years, Led Zeppelin, Rihanna and Taylor swift comes in as some other high seller artists but again,
+                    they lose in the competition. But when we try to visualize best sellers working upto 50 years. Elvis Presley and Michael Jackson are great competators 
+                    with 500M and 300M sales with thr working years of 23 and 45 years accordingly. Another interesting fact here is that although led Zeppelin
+                    has worked for 12 years, they sold out the same as madonna who has a working-period of 44 years. A considerable conclusion for this visualization would 
+                    be the fact that it does not matter how many songs the bands or singers publish, if those songs become popular, they can beat the records as
+                    the highest number sales belong to one of the bands with the least number of years being active.
+
+                    
+
+
+                </div>
                 </div>
             </div>
+
+
+            
         </section>
+
+        <!-- Chart 2 part-->
+
+        
+            <section class="holder" id="Task2" style="margin-top:60px;">
+                <div class="container px-4 px-lg-5">
+                    <div class="row">
+                    <div class="col-7 justify-content-md-start">
+                        
+                            <!--<h2 class="text-white mb-4">Built with Bootstrap 5</h2> -->
+                            <h2 class="text-white-100">
+                               A comparison between the number of Sales and TCU . Do they differ to a high extent?         
+                            </h2>
+                            <label for="singers2">Number of Singers to show</label>
+                            <select name="singers2" id="singers2" >
+                                <option value="10">10</option>
+    
+    
+                                <option value="20">20</option>
+    
+    
+                                <option value="50">50</option>
+    
+    
+                            </select>
+                           
+                            <div id="smallmultiplechart" style="margin-bottom: 60px;">
+                                <div class="col-md-12 mt-12 plots" style="display: -webkit-inline-box;">
+                                    <div id="plotDiv1"></div>
+                                    <div id="plotDiv2"></div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div class="col-5 justify-content-md-end">
+                    One of the concepts in music industry is the TCU phenomenon. TCU is an abbreviation for Total Certified Units. This concept has emerged in the USA. 
+                    it includes the number of streams and the number of plays on different platforms. Anyway, The dataset does not give a specific information on that 
+                    and it seems it can have other parameters too. By the way, this specifies some certifications given by a relevant governing body. These certifications are 
+                    given when a certain number of units have been sold, streamed, or downloaded,and they serve as a measure of an artist's commercial success.  
+                    As a matter of fact,  Anyway, it is better to have some comparisons between each artist's sales and TCU 
+                    to see does necessarily an artist with higher sales, have higher TCU too or not. According to my findings, If a singer or a band has more number of sales,
+                    does not mean it has the highest number of TCUs too. Although Drake is 20th of the list in terms of sales, it has the highest TCU. On the other hand, 
+                    The Beatles who has beaten a record in terms of sales, has a high number of TCU but not more than Drake and some other artists 
+                    who have lower rankings in terms of sales. The other interesting result is that there are some major differenes in TCU among artists with the same number of 
+                    sales . A good example would be Rihanna and Pink Floyed. Rihanna with 335 number of TCUs has much higher TCU than Pink Floyed. Eminem, Rihanna and Drake have 
+                    the top TCUs, which means they have more commercial success. As a conclusion we can say that TCU and the number of sales have a positive correlation and are 
+                    usually close,but we cannot say that the higher the number of sales is, the TCU is higher too.
+    
+
+                    </div>
+                    </div>
+                </div>
+    
+    
+    
+            </section>
+
+            <!-- Chart 3 part-->
+                
+            <section class="holder" id="Task3" style="margin-top:60px">
+                <div class="container px-4 px-lg-5">
+                    <div class="row ">
+                        <div class="col-7 justify-content-md-start">
+                            <!--<h2 class="text-white mb-4">Built with Bootstrap 5</h2> -->
+                            <h2 class="text-white-100">
+                                Visualizing the number of sales according to years being active with a third quantative of TCU, categorized by countries.                             
+                            </h2>
+                            <label for="singers3">Number of Singers to show</label>
+                            <select name="singers3" id="singers3" >
+                                <option value="10">10</option>
+    
+    
+                                <option value="20">20</option>
+    
+    
+                                <option value="50">50</option>
+                                <option value="120">All</option>
+    
+
+                            </select>
+                           
+                            <div id="bubbleChart" style="margin-bottom: 60px;">
+                                
+                            </div>
+                        </div>
+                        <div class="col-3 justify-content-end" style="margin-left: 170px;"> This chart nicely shows what the correlation between number of years being active and sales is with 
+                            a measure of TCU through the radius of bubbles . Each bubble is a singer. The color also shows the nationality of the singer. 
+                            What we have found is the highest number of singers in this dataset belongs to the united states. We understand this when we hover on 
+                            its bubble out of the box and the next one belongs to United Kingdom. While we expect the number of years increases the chance of having higher
+                            sales and TCUs, we observe the number of TCUs is at top for singers who have worked approximately 20 years and the number of sales does
+                            not necessarily escalate with a passage of time. But in some cases like Mickeal Jackson and Queen on the contrary, an eye-catching 
+                            increase is observable.
+
+                        </div>
+
+                    </div>
+                    
+                    
+                </div>
+            </section>
+
+             <!-- Chart 4 part-->
+
+             <section class="holder" id="Task4" style="margin-top: 60px">
+                <div class="container px-4 px-lg-5">
+                    <div class="row ">
+                        <div class="col-7 justify-content-md-start">
+                            <!--<h2 class="text-white mb-4">Built with Bootstrap 5</h2> -->
+                            <h2 class="text-white-100">
+                                What are top 5, 10, and 20 genres with mentioning their percentage being included in singers' resume.       
+                            </h2>
+                            <label for="singers4">Number of Singers to show</label>
+                            <select name="singers4" id="singers4" >
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                            </select>
+                            <div id="pieChart" style="margin-bottom: 60px;"></div>
+                        </div>
+                        <div class="col-5 justify-content-md-end" >
+                            In this chart we want to see which genres have been included in the singers' work. This pie chart shows that Among all genres,
+                             pop is the most popular one with 22% of popularity and the next one with a high difference is rock with 13.81 %. 
+                             If we choose 50 genres to show, psychedelic rock is the least popular genre among singers. This does not only show the singer's interest 
+                             although there are not data related to people's interest. We can somehow say that these genres are popular among the singers because they are popular
+                             among people too. We can use the most popular genres in the next visualization too. The most challenging part here was the extraction of genres of each
+                             singer. They must be extracted and then put in a dictionary and using an algorithm written by me, the mentioned task was done. Then they should be counted
+                             as a dictionary comprises of a key and a value. The key here was the name of the genre and the value was the number of times it has been met in the dataset.
+                             Using the total number of occurences of all genres, we can calculate the percentage of inclusion of each genre in the all over of the dataset.
+                             
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+                         <!-- Chart 5 part-->
+
+                         <section class="holder" id="Task5" style="margin-top: 60px">
+                            <div class="container px-4 px-lg-5">
+                                <div class="row ">
+                                    <div class="col-7 justify-content-md-start">
+                                        <!--<h2 class="text-white mb-4">Built with Bootstrap 5</h2> -->
+                                        <h2 class="text-white-100"> To what extent singers from which countries used top 5 genres most included in singers' resume ?
+                                             What are top 5, 10, and 20 genres with mentioning their percentage being included in singers' resume.       
+                                        </h2>
+                                        
+                                        <div id="waffleChart" style="margin-bottom: 60px;">
+
+                                        </div>
+                                    </div>
+                                    <div class="justify-content-md-end" >
+                                       This chart shows 5 top genres and it shows artists from which countries mostly include that genre in their work. Only 5 
+                                       countires are visibile in each waffle and if there are still other countires, they are grouped as other countries.
+                                       As we can see the united dtates is on top in all of the genres and singers exploiting those genres are from there. 
+                                       R&B has the most popularity with 88% in the USA and then hip hop with 80%.
+                                       United Kingdom is the next country in which the singers with the genres of pop, rock and hard rock are born the most.
+                                       Canada percentage is scattered among four genres of pop, rock, R&B and hip hop with percentages of less than 9.
+                                       Barbados is also seen in three genres of pop, R&B and hip hop. The rest are united states and united kingdom in rock and trinidad and
+                                       tobago in hip hope.
+                                         
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
         <!-- Contact-->
         <section class="contact-section bg-black" id='signup'>
             <div class="container px-4 px-lg-5">
@@ -254,12 +458,21 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Data Visualization Final Project</div></footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="/Task1/barChart.js" type="module"></script>
+        <script type = "text/javascript" src="/Task1/barChart.js"></script>  
+        <script src="/Task2/smallMultiplesChart.js" type="module"></script>
+        <script src="Task3/bubbleChart.js" type="module"></script>
+        <script src="Task4/pieChart.js" type="module"></script>
+        <script src="Task5/waffleChart.js" type="module"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
