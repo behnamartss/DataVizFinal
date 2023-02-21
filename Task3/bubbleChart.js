@@ -18,7 +18,7 @@ var svg = d3.select("#bubbleChart")
 
 // notice: I first calculated the 6 most populated trees among all the neighborhoods in a descending order. 
 //And using that list, I extracted rows with the name of selected trees,
-const total = await d3.csv("../data/best_selling_artists_final.csv");
+const total = await d3.csv("data/best_selling_artists_final.csv");
 
 const sorted=total.sort(function (a,b) {
     return d3.descending(parseInt(a.Sales),parseInt(b.Sales));
